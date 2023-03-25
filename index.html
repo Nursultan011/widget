@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merchant Site</title>
+  </head>
+  <body>
+    <button onclick="openPaymentWidgetHandler();">
+      Открыть платежный виджет
+    </button>
+
+    <!-- Подключение файла виджета с вашего сервера или CDN -->
+    <script src="./dist/payment-widget.min.js"></script>
+    <script>
+      function openPaymentWidgetHandler() {
+        openPaymentWidget({
+          merchantId: "your-merchant-id",
+          amount: 100,
+          currency: "USD",
+          // и другие параметры, которые могут потребоваться для платежа
+        });
+      }
+    </script>
+  </body>
+</html>

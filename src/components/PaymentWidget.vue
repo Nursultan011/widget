@@ -9,7 +9,12 @@
 
 <script>
 export default {
-  props: ["options"],
+  props: {
+    params: {
+      type: Object,
+      required: true,
+    },
+  },
   data() {
     return {
       // ...данные компонента...
@@ -21,7 +26,7 @@ export default {
     },
   },
   mounted() {
-    console.log(props.options);
+    console.log(this.params);
   },
 };
 </script>

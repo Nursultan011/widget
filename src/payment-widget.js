@@ -6,7 +6,7 @@ function openPaymentWidget(widgetOptions) {
   document.body.appendChild(widgetContainer);
 
   new Vue({
-    render: (h) => h(PaymentWidget, { props: { options: widgetOptions } }),
+    render: (h) => h(PaymentWidget, { props: { params: widgetOptions } }),
   }).$mount(widgetContainer);
 }
 
